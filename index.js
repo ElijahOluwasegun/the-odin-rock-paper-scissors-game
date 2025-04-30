@@ -2,24 +2,24 @@ console.log("Hello World")
 
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random()*3)
-    console.log(randomNumber)
+    // console.log(randomNumber) // Checked to see if randomNumber outputs numbers between 0 and 3
     if (randomNumber === 0 ) {
-        console.log("rock")
+        return "rock"
     } else if (randomNumber === 1){
-        console.log("paper")
+        return "paper"
     } else {
-        console.log("scissors")
+        return "scissors"
     }
 }
 
-getComputerChoice()
+console.log(getComputerChoice())
 
 function getHumanChoice() {
-    let userChoice = prompt("rock, paper, scissors? ")
-    console.log(userChoice)
+    let userChoice = prompt("rock, paper, scissors? ").toLowerCase()
+    return userChoice
 }
 
-getHumanChoice()
+console.log(getHumanChoice())
 
 let humanScore = 0
 let computerScore = 0
